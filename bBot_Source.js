@@ -1017,14 +1017,14 @@
                 welcomeback ?
                     setTimeout(function(user) {
                         API.sendChat(subChat(basicBot.chat.welcomeback, {
-                            name: user.username
+                            name: user.username,
                             tema: basicBot.settings.tema
 
                         }));
                     }, 1 * 1000, user) :
                     setTimeout(function(user) {
                         API.sendChat(subChat(basicBot.chat.welcome, {
-                            name: user.username
+                            name: user.username,
                             tema: basicBot.settings.tema
                         }));
                     }, 1 * 1000, user);
@@ -2422,8 +2422,8 @@
                 }
             },
 
-            /*botnameCommand: {
-                command: 'botname',
+            temaCommand: {
+                command: 'tema',
                 rank: 'manager',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
@@ -2431,16 +2431,15 @@
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
                         var msg = chat.message;
-                        if (msg.length <= cmd.length + 1) return API.sendChat(subChat(basicBot.chat.currentbotname, {botname: basicBot.settings.botName}));
+                        if (msg.length <= cmd.length + 1) return API.sendChat(subChat(basicBot.chat.currenttema, {tema: basicBot.settings.tema}));
                         var argument = msg.substring(cmd.length + 1);
                         if (argument) {
-                            basicBot.settings.botName = argument;
-                            API.sendChat(subChat(basicBot.chat.botnameset, {botName: basicBot.settings.botName}));
+                            basicBot.settings.tema = argument;
+                            API.sendChat(subChat(basicBot.chat.temaset, {tema: basicBot.settings.tema}));
                         }
                     }
                 }
             },
-*/
             clearchatCommand: {
                 command: ['clearchat', 'clear', 'limparchat', 'limpar'],
                 rank: 'manager',
