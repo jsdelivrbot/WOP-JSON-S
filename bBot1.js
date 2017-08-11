@@ -1,7 +1,7 @@
 (function () {
 
     // Change this to your GitHub username so you don't have to modify so many things.
-    var fork = "V1RTU4LL1F3";
+    var fork = "NiceATC";
 
     // Define our function responsible for extending the bot.
     function extend() {
@@ -49,7 +49,7 @@
       botName: "World Bot",
       language: "portuguese",
       chatLink: "https://rawgit.com/NiceATC/AnimeMusicMusicBR/master/botlang.json",
-      scriptLink: "https://cdn.database-ammbr.tk/bot/bBot_Source.js",
+      scriptLink: "https://rawgit.com/NiceATC/WOP-JSON-S/master/bBot_Source.js",
       roomLock: false, // Requires an extension to re-load the script
       startupCap: 1, // 1-200
       startupVolume: 0, // 0-100
@@ -113,6 +113,6 @@
     }));
 
     // Start the bot and extend it when it has loaded.
-    $.getScript("https://cdn.database-ammbr.tk/bot/bBot_Source.js", extend);
+    $.getScript("https://rawgit.com/NiceATC/WOP-JSON-S/master/bBot_Source.js", extend);
 
 }).call(this);
